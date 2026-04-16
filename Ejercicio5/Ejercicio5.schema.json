@@ -1,21 +1,18 @@
-{
+﻿{
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Ejercicio 5 JSON Schema DAM",
   "description": "Este es el ejercicio 5 de la relación",
   "type": "object",
   "properties": {
     "idPedido": {
-      "description": "Seria el identificador del pedido",
       "type": "string",
       "maxLength": 7
     },
     "fecha": {
-      "description": "Seria la fecha y hora del pedido",
       "type": "string",
       "format": "date-time"
     },
     "cliente": {
-      "description": "Serian los datos del cliente",
       "type": "object",
       "properties": {
         "idCliente": {
@@ -52,7 +49,6 @@
       "additionalProperties": false
     },
     "productos": {
-      "description": "Serian los productos incluidos en el pedido",
       "type": "array",
       "items": {
         "type": "object",
@@ -79,7 +75,6 @@
       "uniqueItems": false
     },
     "estadoPedido": {
-      "description": "Serian los estados por los que pasa el pedido",
       "type": "array",
       "items": {
         "type": "string"
@@ -88,7 +83,6 @@
       "uniqueItems": false
     },
     "totalPedido": {
-      "description": "Seria el total del pedido",
       "type": "number",
       "minimum": 0
     }
