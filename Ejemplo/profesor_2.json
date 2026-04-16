@@ -1,0 +1,11 @@
+{
+    "$schema":"profesor_2.schema.json",
+    "datosPersonales":{
+        "nombre":"Juanan",
+        "edad":27
+    },
+    "datosAcademicos":{
+        "departamento":"Informática",
+        "asignaturas":["LMS","AWS","SOST"]
+    }
+}

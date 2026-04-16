@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ejercicio 3 JSON Schema DAM",
+  "description": "Este es el ejercicio 3 de la relación",
+  "type": "object",
+  "properties": {
+    "mueble": {
+      "type": "string"
+    },
+    "tipoMadera": {
+      "type": "string"
+    },
+    "medidas": {
+      "type": "object",
+      "properties": {
+        "ancho_cm": {
+          "type": "number"
+        },
+        "alto_cm": {
+          "type": "number"
+        },
+        "profundidad_cm": {
+          "type": "number"
+        }
+      }
+    }
+  },
+  "required": ["mueble", "tipoMadera", "medidas"],
+  "additionalProperties": false,
+  "patternProperties": {
+    "^\\$": {}
+  }
+}

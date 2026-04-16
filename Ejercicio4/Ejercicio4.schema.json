@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ejercicio 4 JSON Schema DAM",
+  "description": "Este es el ejercicio 4 de la relación",
+  "type": "object",
+  "properties": {
+    "mueble": {
+      "type": "string"
+    },
+    "tipoMadera": {
+      "type": "string"
+    },
+    "medidas": {
+      "type": "object",
+      "properties": {
+        "ancho": {
+          "type": "object",
+          "properties": {
+            "numero": {
+              "type": "number"
+            },
+            "medida": {
+              "type": "string"
+            }
+          },
+          "required": ["numero", "medida"],
+          "additionalProperties": false
+        },
+        "alto": {
+          "type": "object",
+          "properties": {
+            "numero": {
+              "type": "number"
+            },
+            "medida": {
+              "type": "string"
+            }
+          },
+          "required": ["numero", "medida"],
+          "additionalProperties": false
+        },
+        "profundidad": {
+          "type": "object",
+          "properties": {
+            "numero": {
+              "type": "number"
+            },
+            "medida": {
+              "type": "string"
+            }
+          },
+          "required": ["numero", "medida"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["ancho", "alto", "profundidad"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["mueble", "tipoMadera", "medidas"],
+  "additionalProperties": false,
+  "patternProperties": {
+    "^\\$": {}
+  }
+}

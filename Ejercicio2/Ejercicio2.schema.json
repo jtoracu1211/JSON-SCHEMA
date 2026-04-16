@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ejercicio 2 JSON Schema DAM",
+  "description": "Este es el ejercicio 2 de la relación",
+    "type": "object",
+    "properties": {
+        "contenido": {
+            "type": "string"
+        },
+        "tipoSigla": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "tipoNumerico": {
+            "type": "array",
+            "items": {
+                "type": "number"
+            }
+        },
+        "tipoCadena": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    },
+    "required": ["contenido", "tipoSigla", "tipoNumerico", "tipoCadena"],
+    "additionalProperties": false,
+    "patternProperties": {
+        "^\\$": {}
+    }
+}
