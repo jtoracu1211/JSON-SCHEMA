@@ -1,19 +1,19 @@
 {
-    "$schema":"Ejercicio4.schema.json",
-    "mueble":"sinfonier",
-    "tipoMadera":"caoba",
-    "medidas":{
-        "ancho":{
-            "numero": 10,
-            "medida": "cm"
-        },
-        "alto":{
-            "numero": 20,
-            "medida": "cm"
-        },
-        "profundidad":{
-            "numero": 12,
-            "medida": "cm"
-        }
+  "$schema": "Ejercicio4.schema.json",
+  "mueble": "sinfonier",
+  "tipoMadera": "caoba",
+  "medidas": {
+    "ancho": {
+      "numero": 10,
+      "medida": "cm"
+    },
+    "alto": {
+      "numero": 20,
+      "medida": "cm"
+    },
+    "profundidad": {
+      "numero": 12,
+      "medida": "cm"
     }
+  }
 }

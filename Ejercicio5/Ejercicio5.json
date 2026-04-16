@@ -1,32 +1,32 @@
 ﻿{
-    "$schema":"Ejercicio5.schema.json",
-    "idPedido":"P000321",
-    "fecha":"2026-04-16T16:30:00Z",
-    "cliente":{
-        "idCliente":"CLT001",
-        "nombre":"Pepe Perez",
-        "email":"pepe.perez@email.com",
-        "direccion":{
-            "calle":"Calle Falsa 123",
-            "ciudad":"Madrid",
-            "codigoPostal":"28080",
-            "pais":"España"
-        }
+  "$schema": "Ejercicio5.schema.json",
+  "idPedido": "P000321",
+  "fecha": "2026-04-16T16:30:00Z",
+  "cliente": {
+    "idCliente": "CLT001",
+    "nombre": "Pepe Perez",
+    "email": "pepe.perez@email.com",
+    "direccion": {
+      "calle": "Calle Falsa 123",
+      "ciudad": "Madrid",
+      "codigoPostal": "28080",
+      "pais": "España"
+    }
+  },
+  "productos": [
+    {
+      "idProducto": "PRD001",
+      "nombre": "Teclado",
+      "cantidad": 2,
+      "precioUnitario": 35.5
     },
-    "productos":[
-        {
-            "idProducto":"PRD001",
-            "nombre":"Teclado",
-            "cantidad":2,
-            "precioUnitario":35.5
-        },
-        {
-            "idProducto":"PRD002",
-            "nombre":"Raton",
-            "cantidad":1,
-            "precioUnitario":20
-        }
-    ],
-    "estadoPedido":["creado","pagado","enviado"],
-    "totalPedido":91
+    {
+      "idProducto": "PRD002",
+      "nombre": "Raton",
+      "cantidad": 1,
+      "precioUnitario": 20
+    }
+  ],
+  "estadoPedido": ["creado", "pagado", "enviado"],
+  "totalPedido": 91
 }

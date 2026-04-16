@@ -1,44 +1,44 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "Ejercicio 1 JSON Schema",
-    "description": "Este es el primer ejercicio que es para un objeto coche",
-    "type": "object",
-    "properties": {
-        "marca": {
-            "description": "Sería la marca del coche",
-            "type": "string"
-        },
-        "modelo": {
-            "description": "Sería el modelo del coche",
-            "type": "string"
-        },
-        "diesel": {
-            "description": "Indica si el coche es diesel",
-            "type": "boolean"
-        },
-        "gasolina": {
-            "description": "Indica si el coche es de gasolina",
-            "type": "boolean"
-        },
-        "hibrido": {
-            "description": "Indica si el coche es híbrido",
-            "type": "boolean"
-        },
-        "puntuacionClientes": {
-            "description": "Serían las puntuaciones que le han dado los clientes al coche",
-            "type": "array",
-            "items": {
-                "type": "number",
-                "minimum": 0,
-                "maximum": 10
-            },
-            "minItems": 1,
-            "uniqueItems": false
-        }
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ejercicio 1 JSON Schema",
+  "description": "Este es el primer ejercicio que es para un objeto coche",
+  "type": "object",
+  "properties": {
+    "marca": {
+      "description": "Sería la marca del coche",
+      "type": "string"
     },
-    "required": ["marca", "modelo", "puntuacionClientes"],
-    "additionalProperties": false,
-    "patternProperties": {
-        "^\\$": {}
+    "modelo": {
+      "description": "Sería el modelo del coche",
+      "type": "string"
+    },
+    "diesel": {
+      "description": "Indica si el coche es diesel",
+      "type": "boolean"
+    },
+    "gasolina": {
+      "description": "Indica si el coche es de gasolina",
+      "type": "boolean"
+    },
+    "hibrido": {
+      "description": "Indica si el coche es híbrido",
+      "type": "boolean"
+    },
+    "puntuacionClientes": {
+      "description": "Serían las puntuaciones que le han dado los clientes al coche",
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 10
+      },
+      "minItems": 1,
+      "uniqueItems": false
     }
+  },
+  "required": ["marca", "modelo", "puntuacionClientes"],
+  "additionalProperties": false,
+  "patternProperties": {
+    "^\\$": {}
+  }
 }

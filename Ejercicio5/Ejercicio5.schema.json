@@ -1,4 +1,4 @@
-{
+﻿{
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Ejercicio 5 JSON Schema DAM",
   "description": "Este es el ejercicio 5 de la relación",
@@ -87,7 +87,14 @@
       "minimum": 0
     }
   },
-  "required": ["idPedido", "fecha", "cliente", "productos", "estadoPedido", "totalPedido"],
+  "required": [
+    "idPedido",
+    "fecha",
+    "cliente",
+    "productos",
+    "estadoPedido",
+    "totalPedido"
+  ],
   "additionalProperties": false,
   "patternProperties": {
     "^\\$": {}
