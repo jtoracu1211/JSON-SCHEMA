@@ -1,0 +1,35 @@
+{
+    "$schema": "./Examen.schema.json",
+    "nombre": "Restaurante SL",
+    "direccion": {
+        "calle":"Lex Bina",
+        "ciudad":"Vitalia",
+        "codigo_postal":"29010"
+    },
+    "comandas": [
+        {
+            "id":"AC-777#",
+            "num_mesa": 7,
+            "nombre_camarero":"Isabella",
+            "estado":"en preparación",
+            "platos":[
+                {
+                    "nombre":"albóndigas",
+                    "precio":7.5,
+                    "cantidad":2,
+                    "extras":["salsa","patatas"]
+                },
+                {
+                    "nombre":"entrecot",
+                    "precio":8.5,
+                    "cantidad":1,
+                    "extras":["patatas"]
+                }
+            ],
+            "pago":{
+                "metodo":"efectivo",
+                "importe_total":23.5
+            }
+        }
+    ]
+}
