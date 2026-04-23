@@ -1,5 +1,5 @@
 ﻿{
-  "$schema": "Ejercicio5.schema.json",
+  "$schema": "./Ejercicio5.schema.json",
   "idPedido": "P000321",
   "fecha": "2026-04-16T16:30:00Z",
   "cliente": {

@@ -1,0 +1,102 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "torneo": {
+      "type": "object",
+      "properties": {
+        "fecha": {
+          "type": "string",
+          "format": "date"
+        },
+        "ubicacion": {
+          "type": "object",
+          "properties": {
+            "ciudad": {
+              "type": "string"
+            },
+            "pais": {
+              "type": "string"
+            }
+          },
+          "required": ["ciudad", "pais"]
+        },
+        "partidos": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 128,
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[WM]-[a-z]{3}-\\d{3}$"
+              },
+              "categoria": {
+                "type": "string",
+                "enum": [
+                  "individual masculino",
+                  "individual femenino",
+                  "dobles"
+                ]
+              },
+              "fase": {
+                "type": "string",
+                "enum": [
+                  "primera ronda",
+                  "octavos",
+                  "cuartos",
+                  "semifinal",
+                  "final"
+                ]
+              },
+              "jugadores": {
+                "type": "array",
+                "minItems": 2,
+                "maxItems": 4,
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "nombre": { "type": "string" },
+                    "apellido": { "type": "string" },
+                    "nacionalidad": { "type": "string" },
+                    "ranking": { "type": "integer", "minimum": 1 },
+                    "tipo": {
+                      "type": "string",
+                      "enum": ["cabeza de serie", "wildcard"]
+                    }
+                  },
+                  "required": ["nombre", "apellido", "nacionalidad", "ranking"]
+                }
+              },
+              "resultado": {
+                "type": "object",
+                "properties": {
+                  "sets_jugador1": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "sets_jugador2": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "sets_equipo1": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "sets_equipo2": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                }
+              }
+            },
+            "required": ["id", "categoria", "fase", "jugadores"]
+          }
+        }
+      },
+      "required": ["fecha", "ubicacion", "partidos"]
+    }
+  },
+  "required": ["torneo"]
+}

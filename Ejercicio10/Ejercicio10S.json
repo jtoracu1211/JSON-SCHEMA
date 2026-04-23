@@ -1,0 +1,72 @@
+{
+  "$schema": "./Ejercicio10S.schema.json",
+  "torneo": {
+    "fecha": "2026-04-13",
+    "ubicacion": {
+      "ciudad": "Marbella",
+      "pais": "España"
+    },
+    "partidos": [
+      {
+        "id": "W-abc-123",
+        "categoria": "individual femenino",
+        "fase": "cuartos",
+        "jugadores": [
+          {
+            "nombre": "Iga",
+            "apellido": "Swiatek",
+            "nacionalidad": "Polaca",
+            "ranking": 1,
+            "tipo": "cabeza de serie"
+          },
+          {
+            "nombre": "Aryna",
+            "apellido": "Sabalenka",
+            "nacionalidad": "Bielorrusa",
+            "ranking": 2,
+            "tipo": "wildcard"
+          }
+        ],
+        "resultado": {
+          "sets_jugador1": 2,
+          "sets_jugador2": 1
+        }
+      },
+      {
+        "id": "M-xyz-456",
+        "categoria": "dobles",
+        "fase": "semifinal",
+        "jugadores": [
+          {
+            "nombre": "Rafael",
+            "apellido": "Nadal",
+            "nacionalidad": "Española",
+            "ranking": 10
+          },
+          {
+            "nombre": "Carlos",
+            "apellido": "Alcaraz",
+            "nacionalidad": "Española",
+            "ranking": 3
+          },
+          {
+            "nombre": "Novak",
+            "apellido": "Djokovic",
+            "nacionalidad": "Serbia",
+            "ranking": 1
+          },
+          {
+            "nombre": "Daniil",
+            "apellido": "Medvedev",
+            "nacionalidad": "Rusa",
+            "ranking": 4
+          }
+        ],
+        "resultado": {
+          "sets_equipo1": 3,
+          "sets_equipo2": 2
+        }
+      }
+    ]
+  }
+}

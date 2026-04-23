@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ejercicio 9 JSON Schema",
+  "description": "Este es el ejercicio 9 de schema",
+  "type": "object",
+  "properties": {
+    "libros": {
+      "description": "Sería un array de objetos libro",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "isbn": {
+            "description": "Es el código del libro",
+            "type": "string",
+            "pattern": "^([0-9]{3}-){4}[0-9]{1}$"
+          },
+          "tipoLibro": {
+            "description": "Es el tipo del libro",
+            "type": "string",
+            "enum": ["novela", "ensayo", "biografía"]
+          },
+          "categoria": {
+            "description": "Es la categoría del libro",
+            "type": "string",
+            "enum": ["préstamo", "consulta"]
+          },
+          "titulo": {
+            "description": "Es el título del libro",
+            "type": "string"
+          },
+          "autores": {
+            "description": "Es el o los autores del libro",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "nombre": {
+                  "description": "Es el nombre del autor",
+                  "type": "string"
+                },
+                "apellidos": {
+                  "description": "Es el apellido del autor",
+                  "type": "string"
+                },
+                "nacionalidad": {
+                  "description": "Es la nacionalidad del autor",
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false,
+              "required": ["nombre", "apellidos"]
+            },
+            "minItems": 1
+          },
+          "editor": {
+            "description": "Es el editor del libro",
+            "type": "object",
+            "properties": {
+              "nombre": {
+                "description": "Es el nombre del editor",
+                "type": "string"
+              },
+              "apellidos": {
+                "description": "Es el apellido del editor",
+                "type": "string"
+              },
+              "nacionalidad": {
+                "description": "Es la nacionalidad del editor",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "numeroPaginas": {
+            "description": "Es el número de páginas del libro",
+            "type": "integer"
+          },
+          "anyoPublicacion": {
+            "description": "Es el año de publicación del libro",
+            "type": "string",
+            "pattern": "^[0-9]{4}$"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["categoria", "titulo", "autores"]
+      },
+      "minItems": 1,
+      "maxItems": 500
+    }
+  },
+  "additionalProperties": false,
+  "patternProperties": {
+    "^\\$": {}
+  }
+}

@@ -1,0 +1,25 @@
+{
+    "$schema": "./Ejercicio9.schema.json",
+    "libros": [
+        {
+            "isbn": "012-345-678-901-2",
+            "tipoLibro": "novela",
+            "categoria": "préstamo",
+            "titulo": "El Gran Gatsby",
+            "autores": [
+                {
+                    "nombre": "F. Scott",
+                    "apellidos": "Fitzgerald",
+                    "nacionalidad": "estadounidense"
+                }
+            ],
+            "editor": {
+                "nombre": "Roberto",
+                "apellidos": "García",
+                "nacionalidad": "estadounidense"
+             },
+             "numeroPaginas": 180,
+             "anyoPublicacion": "1925"
+        }
+    ]
+}
