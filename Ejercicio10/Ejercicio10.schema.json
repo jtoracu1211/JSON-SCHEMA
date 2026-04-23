@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ejercicio 10 JSON schema",
+  "type": "object",
+  "properties": {
+    "torneo": {
+      "type": "object",
+      "properties": {
+        "fecha": {
+          "type": "string",
+          "pattern": "^(19|20)[0-9]{2}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"
+        },
+        "ubicacion": {
+          "type": "object",
+          "properties": {
+            "ciudad": {
+              "type": "string"
+            },
+            "pais": {
+              "type": "string"
+            }
+          },
+          "required": ["ciudad", "pais"],
+          "additionalProperties": false
+        },
+        "partidos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[MW]-[a-z]{3}-[0-9]{3}$"
+              },
+              "categoria": {
+                "type": "string",
+                "enum": [
+                  "individual masculino",
+                  "individual femenino",
+                  "dobles"
+                ]
+              },
+              "fase": {
+                "type": "string",
+                "enum": [
+                  "primera ronda",
+                  "octavos",
+                  "cuartos",
+                  "semifinal",
+                  "final"
+                ]
+              },
+              "jugadores": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "nombre": {
+                      "type": "string"
+                    },
+                    "apellido": {
+                      "type": "string"
+                    },
+                    "nacionalidad": {
+                      "type": "string"
+                    },
+                    "ranking": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "tipo": {
+                      "type": "string",
+                      "enum": ["cabeza de serie", "wildcard"]
+                    }
+                  },
+                  "required": ["nombre", "apellido", "nacionalidad", "ranking"],
+                  "additionalProperties": false
+                },
+                "minItems": 2,
+                "maxItems": 4
+              },
+              "resultado": {
+                "type": "object",
+                "properties": {
+                  "sets_jugador1": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "sets_jugador2": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "sets_equipo1": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "sets_equipo2": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "required": ["id", "categoria", "fase", "jugadores"],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 128
+        }
+      },
+      "required": ["fecha", "ubicacion", "partidos"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["torneo"],
+  "additionalProperties": false,
+  "patternProperties": {
+    "^\\$": {}
+  }
+}

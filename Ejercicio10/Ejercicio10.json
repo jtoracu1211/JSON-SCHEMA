@@ -1,0 +1,62 @@
+{
+    "$schema": "./Ejercicio10.schema.json",
+    "torneo": {
+        "fecha": "2026-04-13",
+        "ubicacion": {
+            "ciudad": "París",
+            "pais": "Francia"
+        },
+        "partidos":[
+            {
+                "id":"W-abc-123",
+                "categoria":"individual femenino",
+                "fase":"semifinal",
+                "jugadores":[
+                    {
+                        "nombre":"Mirra",
+                        "apellido":"Andreeva",
+                        "nacionalidad":"rusa",
+                        "ranking":8,
+                        "tipo":"wildcard"
+                    },
+                    {
+                        "nombre":"Coco",
+                        "apellido":"Gauff",
+                        "nacionalidad":"estadounidense",
+                        "ranking":3,
+                        "tipo":"cabeza de serie"
+                    }
+                ],
+                "resultado":{
+                    "sets_jugador1":2,
+                    "sets_jugador2":1
+                }
+            },
+            {
+                "id":"M-abc-123",
+                "categoria":"individual masculino",
+                "fase":"semifinal",
+                "jugadores":[
+                    {
+                        "nombre":"Carlos",
+                        "apellido":"Alcaraz",
+                        "nacionalidad":"español",
+                        "ranking":2,
+                        "tipo":"wildcard"
+                    },
+                    {
+                        "nombre":"Janik",
+                        "apellido":"Sinner",
+                        "nacionalidad":"italiano",
+                        "ranking":1,
+                        "tipo":"cabeza de serie"
+                    }
+                ],
+                "resultado":{
+                    "sets_jugador1":3,
+                    "sets_jugador2":2
+                }
+            }
+        ]
+    }
+}
